@@ -27,8 +27,8 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        testcommand: run test:ci
+        testcommand: run ng test
     - name: Build
       run: |
         npm install
-        grunt
+        ng build

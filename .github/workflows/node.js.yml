@@ -28,3 +28,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         testcommand: run test:ci
+    - name: Build
+      run: |
+        npm install
+        grunt

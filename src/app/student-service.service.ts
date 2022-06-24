@@ -20,6 +20,10 @@ export class StudentServiceService {
     return this.http.get(endpoint + 'Students/GetStudents', httpOptions);
   }
 
+  addStudent(student:Object): Observable<any> {
+    return this.http.post(endpoint + 'Students', httpOptions);
+  }
+
   delete(id:number): Observable<any> {
     return this.http.delete(endpoint + 'Students/DeleteStudent/' + id, httpOptions)
     .pipe(
